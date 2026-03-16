@@ -1,0 +1,6 @@
+payment_method,total_orders,returned_count,return_rate_%
+Card,449989,22533,5.01
+Invoice,74839,3726,4.98
+Klarna,300621,45145,15.02
+PayPal,75055,3760,5.01
+Swish,599496,29974,5.0
