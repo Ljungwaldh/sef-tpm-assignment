@@ -22,6 +22,10 @@ Analysis of 1,500,000 e-commerce orders for Swedish football club merchandise.
 
 **Recommended action:** Evaluate whether Klarna's higher conversion rate justifies its return-rate cost. Consider introducing restocking fees for Klarna returns, adjusting return policy terms for deferred-payment methods, or surfacing size/fit guidance more prominently at checkout to reduce uncertainty-driven returns.
 
+**Addtional Reflections** It is valid to investigate the cost vs. benefits of having Klarna, but part of the benefit analysis has to consider what the business case would look like if Klarna was not be available as a payment option - how much would this affect the average order value amounts and subsequent revenues? In marketing and ecommerce there tends to be the trend that, given the higher variety of payment methods available, the higher the revenue and customer LTV (life-time-value). Multiple studies in e‑commerce show that aligning checkout with customers’ preferred payment methods reduces cart abandonment and raises conversion and revenue, and that more flexible digital payment options (e.g. wallets, BNPL) can support higher order values and repeat purchasing, which are key drivers of customer lifetime value (see e.g. Monext, 2024; PayPal, 2024; Jadhav & Batish, 2024).
+
+The investigation would need to include the analysis of if Klarna customers generally have higher average orde value and higher LTV than other customers using other payment methods.
+
 ---
 
 ## Q3: Geographic Distribution of Club Merchandise
@@ -31,6 +35,8 @@ Analysis of 1,500,000 e-commerce orders for Swedish football club merchandise.
 **Implication:** Heavy home-city concentration limits revenue ceiling and exposes clubs to local economic or demographic shifts. A geographically distributed fanbase is a commercial resilience indicator.
 
 **Recommended action:** For concentrated clubs, explore targeted campaigns in secondary cities where they already have a footprint (e.g. Göteborg for Stockholm clubs). For Mjällby AIF, investigate what drives national reach and whether it can be scaled. SEF could support cross-club geographic analysis as part of a shared commercial intelligence offering.
+
+**Addtional Reflections** While the analysis and suggestion is valid to explore and perhaps A/B test targeted campaigns in secondary cities they they have a footprint, the nature of Swedish football does naturally make it difficult for clubs to increase their geographical reach, with cultural aspects to consider. Primarily, it's crucial that the customer records and data is accurate towards a given individual - this being touched upon in Task 2 with the Contact Data Synchronisation Platform (ensuring a 'Golden Record') and the data quality task in Task 3 regarding multiple email addresses where each one has more than 1 'customer id' associated with it. This is so that retargeting efforts can be correctly targeted and relevant for the given customer/user. In reagrds to Mjällby AIF, one could assume a mix of the facts that it is a very small town in Sweden (where many have perhaps moved to other parts of h country), and their recent success in winning SM Guld in 2025 can be indicators of why their commercial fan following is more widespread across the country, the 'underdog' narrative that may have influenced football fans across the nation.
 
 ---
 
@@ -70,7 +76,7 @@ Analysis of 1,500,000 e-commerce orders for Swedish football club merchandise.
 
 **Why:** Pandas is well-suited to structured tabular data at this scale. Using categorical dtypes for low-cardinality string columns and `float32` for numeric fields reduced memory usage significantly and kept load time under 5 seconds for 1.5M rows. `numpy.isclose` allowed a fully vectorised price consistency check without any row-level iteration. All aggregations were expressed as `groupby` + `agg` operations, which are both readable and performant.
 
-**What I learned from the data:** The data is largely clean — only 0.07% price mismatches and 0.01% test records — but the gaps that do exist (undocumented discounts, duplicate customer accounts, Klarna return behaviour) are commercially meaningful rather than just cosmetic data quality issues. The most actionable finding is probably the Klarna return rate: it is a large, measurable cost driver that can be acted on directly. The geographic concentration analysis was the most structurally interesting — it reframes what looks like strong home-city sales into a question about national growth potential.
+**What I learned from the data:** The data is largely clean — only 0.07% price mismatches and 0.01% test records — but the gaps that do exist (undocumented discounts, duplicate customer accounts, Klarna return behaviour) are commercially meaningful rather than just cosmetic data quality issues. One would need to assess the tradeoff of addressing these gaps in the data versus other competing priorities, and if the issues are systematic or relatively isolated. The most actionable finding is probably the Klarna return rate: it could be a large, measurable cost driver that can be acted on directly. The geographic concentration analysis was the most structurally interesting — it reframes what looks like strong home-city sales into a question about national growth potential.
 
 **On the use of AI tools:** This analysis was completed using a combination of three AI tools, each serving a distinct role.
 

@@ -36,3 +36,10 @@ Output CSVs are written to the `output/` directory.
 - **998 rows (0.07%)** have a `total_amount` that does not match `quantity × unit_price`. These likely reflect discounts applied at checkout that are not captured in a dedicated discount column.
 - **509 emails** are associated with more than one `customer_id`, suggesting duplicate account creation or data entry errors.
 - **104 rows (0.01%)** were flagged as likely test or placeholder records based on email patterns (e.g. `@test.com`), dummy names, or suspicious zipcodes.
+
+## AI Tools used for the Case Assignment
+
+- **Notebook LM** Using source material of the case, the job description, and Svensk Elitfotboll website, creating an AI generated podcast to introduce and give initial guidance on how to solve the case and respective questions
+- **Perpelxity** Overall structure and layering of the case assignment, used for deep research into tools such as Symplify and topics such as Mata Data Management (MDM). 
+- **Claude** Used the browser version to help construct the Symplify User Guide and the PRD documents with carefully designed prompts created by Perplexity. Used Claude Code in generating the analysis and code in Github
+- **Cursor** Used this IDE for interacting with Claude Code, and also using the Cursor AI Agent to consult with concerning the implementation plan suggested by Claude Code to ensure a conscious review and second opinion.
